@@ -33,6 +33,24 @@ curl --location 'http://localhost:8080/videos/d9bc809f-d09c-4a7c-a5b2-5e808f8953
 }'
 ``
 
+# Update metadata for video
+``
+curl --location --request PUT 'http://localhost:8080/videos/d9bc809f-d09c-4a7c-a5b2-5e808f89518a/metadatas/45a7d821-da11-4b7f-9415-79a7881a6482' \
+--header 'Content-Type: application/json' \
+--data '{
+"id": "45a7d821-da11-4b7f-9415-79a7881a6482",
+"videoId": "d9bc809f-d09c-4a7c-a5b2-5e808f89518a",
+"genres": [
+"COMEDY"
+],
+"title": "Test",
+"description": "movie about comedy",
+"director": "fa",
+"releaseDate": "2024-01-01",
+"runningTime": 180.0
+}'
+``
+
 # List all videos metadata
 ``
 curl --location 'http://localhost:8080/videos/metadatas'
