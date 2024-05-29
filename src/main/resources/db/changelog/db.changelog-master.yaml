@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/ddl/01-create_video_table.sql
+  - include:
+      file: db/changelog/ddl/02-create_video_metadata_table.sql
+  - include:
+      file: db/changelog/ddl/03-create_video_metadata_genre_table.sql
+  - include:
+      file: db/changelog/ddl/04-add_constraints.sql
